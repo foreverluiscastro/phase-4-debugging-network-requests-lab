@@ -62,12 +62,12 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: when I clicked the submit form to add a new toy, the error I got back was a 500 error and the first place I thought to look was the controller actions. I realized that the Model name was spelled wrong and all I had to do was update the code and the action worked.
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: when I clicked the like button the error that I got back was a 204 and so I knew that somewhere the information was not either being parsed into json or read json, so I checked my fetch and when I realized everything there was fine, I decided to check the con troller action where I realized, upon update, render json: had not been called.
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: when I tried to donate to goodwill the error I received was a 404 error telling me that the error was the controller action could not properly establish a route to Delete, so i checked my routes and I saw that within the routes I had not updated the resources to include destroy.
